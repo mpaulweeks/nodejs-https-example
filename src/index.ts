@@ -21,8 +21,8 @@ if (process.env.DEV) {
   });
 } else if (process.env.PROD) {
   const httpsServer = https.createServer({
-    key: fs.readFileSync('/etc/letsencrypt/live/nodejs-https.mpaulweeks.com/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/nodejs-https.mpaulweeks.com/fullchain.pem'),
+    key: fs.readFileSync('/etc/letsencrypt/live/nodehttps.mpaulweeks.com/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/nodehttps.mpaulweeks.com/fullchain.pem'),
   }, app);
   httpsServer.listen(443, () => {
     console.log('HTTPS Server running on port 443');
