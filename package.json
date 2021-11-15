@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-https-example",
+  "version": "1.0.0",
+  "description": "Attempt to serve HTTPS within Node (aka without nginx)",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "DEV=1 node dist/index.js",
+    "preserver": "npm run build",
+    "server": "PROD=1 forever start dist/index.js",
+    "stop": "forever stop dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpaulweeks/nodejs-https-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpaulweeks/nodejs-https-example/issues"
+  },
+  "homepage": "https://github.com/mpaulweeks/nodejs-https-example#readme",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.7",
+    "express": "^4.17.1",
+    "forever": "^4.0.1",
+    "https": "^1.0.0",
+    "typescript": "^4.4.4"
+  }
+}
